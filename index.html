@@ -59,6 +59,15 @@
   .pack .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
   .pack h4{color:var(--teal);margin-bottom:8px}
   .pack li{list-style:none;font-size:14.5px;padding:3px 0}
+  .venues{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .venue{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .venue h4{color:var(--teal);margin-bottom:4px;font-size:16.5px}
+  .venue .price{font-size:19px;font-weight:800;color:var(--coral)}
+  .venue li{list-style:none;font-size:14px;padding:2.5px 0}
+  .venue a{color:var(--teal2);font-weight:600}
+  .troute{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+  .troute .leg{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:14.5px;flex-wrap:wrap}
+  .troute .dur{margin-left:auto;font-weight:700;color:var(--teal2);white-space:nowrap}
   footer{text-align:center;color:var(--muted);font-size:13px;padding:26px 10px 40px}
   @media(max-width:560px){.tl .t{flex-basis:52px}.day img{height:160px}}
 </style>
@@ -96,12 +105,85 @@
     <div class="step"><div class="ico">🏠</div><div class="name">回家</div><div class="when">12/13</div></div>
   </div>
   <div class="note">🌧️ 12 月是雨季：雨多半下在午後，早上通常晴天。所以戶外活動都排早上，下午回飯店泳池、SPA、休息。</div>
-  <div class="note">🎾 <b>網球安排（已查證）</b>：只有 AYANA 園區有球場——2 面戶外硬地球場，07:00–20:00、有夜間照明，RIMBA 住客可搭園區免費接駁車前往，球拍可租。Renaissance Uluwatu 與 InterContinental Sanur 館內都沒有網球場（最近的外部球場分別在 3.7 km、步行約 5 分鐘處，但不開放外客的保證不明），所以網球集中排在 AYANA 三天，每天早上打，避開午後雷陣雨與高溫；烏魯瓦圖、薩努爾兩段不排，以泳池、海灘、SPA 為主。AYANA 球場對一般房型是否收費，官網未公布，出發前向飯店確認並先預約時段。</div>
+  <div class="note">🎾 <b>網球安排（已查證）</b>：三間飯店裡只有 AYANA 園區有自有球場；Renaissance Uluwatu 與 InterContinental Sanur 館內沒有——改去連鎖球館 <b>LIGA.TENNIS</b>（Uluwatu、Sanur 分館都在飯店附近，而且全是有頂棚球場，雨季下雨照打）。這樣除了抵達與返程日，每天早上都有球打，完整安排見下方「網球專區」。</div>
+</section>
+
+<section>
+  <h2 class="sec">🎾 網球專區</h2>
+  <p class="sub">場館、每日場次、路線車程、預約與陪打費用，一次看懂。價格為官方頁面查證（2026/10），實際以預訂頁面為準。</p>
+
+  <div class="venues">
+    <div class="venue">
+      <h4>AYANA 園區球場</h4>
+      <div class="price">場地費待確認</div>
+      <ul>
+        <li>🏨 住 RIMBA 期間使用（12/6–12/8）</li>
+        <li>2 面戶外硬地球場 · 07:00–20:00 · 夜間照明</li>
+        <li>園區免費接駁車可達，球拍可租</li>
+        <li>⚠️ 一般房型場地費官網未公布，向飯店預約時確認</li>
+      </ul>
+    </div>
+    <div class="venue">
+      <h4>Liga.Tennis Uluwatu</h4>
+      <div class="price">IDR 300,000／小時</div>
+      <ul>
+        <li>🏨 住 Renaissance 期間（12/9–12/10）</li>
+        <li>有頂棚網球場，另有 Padel 球場</li>
+        <li>🎾 陪打 IDR 550,000／小時（已含場地，最單純）</li>
+        <li>教練課 IDR 660,000 起／小時 · 球拍租 IDR 100,000</li>
+        <li>🔗 <a href="https://liga.tennis/uluwatu-club">官方場館頁</a></li>
+      </ul>
+    </div>
+    <div class="venue">
+      <h4>Liga.Tennis Sanur</h4>
+      <div class="price">IDR 250,000／小時</div>
+      <ul>
+        <li>🏨 住 InterContinental Sanur 期間（12/11–12/12）</li>
+        <li>5 面有頂棚網球場 ＋ 健身房、泳池、桑拿</li>
+        <li>🎾 陪打 IDR 280,000／小時（場地另計，合計約 530,000）</li>
+        <li>教練課 IDR 400,000 起／小時 · 球拍租 IDR 100,000</li>
+        <li>🔗 <a href="https://liga.tennis/sanur-club">官方場館頁</a></li>
+      </ul>
+    </div>
+    <div class="venue">
+      <h4>Liga.Tennis Nusa Dua（雨天備案）</h4>
+      <div class="price">IDR 300,000／小時</div>
+      <ul>
+        <li>☔ 住 AYANA 期間若遇雨改來這裡（Hilton Bali Resort 內）</li>
+        <li>3 面有頂棚硬地球場 · 07:00–20:00</li>
+        <li>🎾 陪打 IDR 280,000／小時（場地另計）</li>
+        <li>🔗 <a href="https://liga.tennis/nusa-dua">官方場館頁</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec" style="margin-top:34px">每日網球場次</h2>
+  <table>
+    <tr><th>日期</th><th>場館</th><th>時間</th><th>交通</th><th>費用參考</th></tr>
+    <tr><td>12/6（日）</td><td>AYANA 園區球場</td><td>07:00–08:30</td><td>園區接駁車</td><td>場地費待確認</td></tr>
+    <tr><td>12/7（一）</td><td>AYANA 園區球場</td><td>07:00–08:00</td><td>園區接駁車</td><td>場地費待確認</td></tr>
+    <tr><td>12/8（二）</td><td>AYANA 園區球場</td><td>07:00–08:30</td><td>園區接駁車</td><td>場地費待確認</td></tr>
+    <tr><td>12/9（三）</td><td>Liga.Tennis Uluwatu</td><td>07:30–09:00</td><td>開車 15–20 分</td><td>場地 300,000／hr；或陪打 550,000／hr 含場地</td></tr>
+    <tr><td>12/10（四）</td><td>Liga.Tennis Uluwatu</td><td>07:30–08:30</td><td>開車 15–20 分</td><td>場地 300,000／hr（換飯店日，彈性參加）</td></tr>
+    <tr><td>12/11（五）</td><td>Liga.Tennis Sanur</td><td>07:30–09:00</td><td>開車 7–10 分</td><td>場地 250,000／hr；陪打另加 280,000／hr</td></tr>
+    <tr><td>12/12（六）</td><td>Liga.Tennis Sanur</td><td>07:30–09:00</td><td>開車 7–10 分</td><td>場地 250,000／hr；陪打另加 280,000／hr</td></tr>
+  </table>
+
+  <h2 class="sec" style="margin-top:34px">路線與車程</h2>
+  <div class="troute">
+    <div class="leg"><span>🏨 RIMBA by AYANA</span><span>➜</span><span>🎾 AYANA 園區球場</span><span class="dur">園區接駁車 · 約 5–10 分</span></div>
+    <div class="leg"><span>🏨 Renaissance Uluwatu</span><span>➜</span><span>🎾 Liga.Tennis Uluwatu</span><span class="dur">開車 約 7 km · 15–20 分</span></div>
+    <div class="leg"><span>🏨 InterContinental Sanur</span><span>➜</span><span>🎾 Liga.Tennis Sanur</span><span class="dur">開車 約 2.3 km · 7–10 分</span></div>
+    <div class="leg"><span>🏨 RIMBA by AYANA</span><span>➜</span><span>🎾 Liga.Tennis Nusa Dua（雨天備案）</span><span class="dur">開車 約 13–15 km · 25–35 分</span></div>
+  </div>
+  <p class="sub" style="margin-top:10px">車程為一般路況估計，峇里島容易塞車，出發請再預留 10 分鐘。</p>
+
+  <div class="note">📱 <b>怎麼預約 LIGA.TENNIS</b>：不用會員。下載 <b>Liga App</b>（或開 liga.tennis 官網）→ Find Venue 選場館 → Book Online 選日期、時段、球場，可加訂陪打／教練 → 線上付款（信用卡、GoPay、QRIS，另加手續費與 10% 稅），<b>5 分鐘內要付完</b>，不然預訂自動取消。<b>只能提前 7 天預約</b>：12/9 的場 12/2 開訂、12/11 的場 12/4、12/12 的場 12/5。取消政策：24 小時前取消，場地費全退（付款手續費不退），改期視同取消。兩個人自己對打只要訂場地；想有人陪打或指導，訂 Hitting Partner 或教練課即可。</div>
 </section>
 
 <section>
   <h2 class="sec">每日行程</h2>
-  <p class="sub">純渡假節奏：每天最多一個重點活動，其餘時間就是飯店、海灘，慢慢來。網球排在 AYANA 期間的每天早上（07:00 開場），其餘兩間飯店附近沒有可用球場，就不排。</p>
+  <p class="sub">純渡假節奏：每天最多一個重點活動，其餘時間就是飯店、海灘，慢慢來。網球每天早上排一場（AYANA 用園區球場，烏魯瓦圖、薩努爾去 LIGA.TENNIS），細節見網球專區。</p>
 
   <div class="day">
     <img src="https://tripbirdie.com/imgs/uploads-small/2022/07/hanging-gardens-of-bali-private-pool-1220.jpg" alt="Bali resort pool">
@@ -162,7 +244,8 @@
     <div class="body">
       <h3>12月9日 週三 — Renaissance 烏魯瓦圖</h3>
       <ul class="tl">
-        <li><span class="t">早上</span><span class="d">飯店無邊際泳池，或搭免費接駁車去 Roosterfish 海灘俱樂部（約 15–20 分鐘）</span></li>
+        <li><span class="t">07:30</span><span class="d">🎾 Liga.Tennis Uluwatu 07:30–09:00（07:00 出發，車程 15–20 分，有頂棚不怕雨；想對打強一點可加訂陪打，IDR 550,000／hr 含場地）</span></li>
+        <li><span class="t">上午</span><span class="d">回飯店無邊際泳池，或搭免費接駁車去 Roosterfish 海灘俱樂部（約 15–20 分鐘）</span></li>
         <li><span class="t">下午</span><span class="d">💆 飯店 SPA、水療，或泳池邊休息</span></li>
         <li><span class="t">晚上</span><span class="d">🍽️ 晚餐飯店內用餐（已含）——這兩天不用煩惱吃什麼</span></li>
       </ul>
@@ -174,6 +257,7 @@
     <div class="body">
       <h3>12月10日 週四 — 換飯店日 <span class="badge">BOOKED</span></h3>
       <ul class="tl">
+        <li><span class="t">07:30</span><span class="d">🎾 Liga.Tennis Uluwatu 07:30–08:30 晨打一場 <span class="badge">OPTIONAL</span> 換飯店日，累了就跳過</span></li>
         <li><span class="t">早上</span><span class="d">飯店泳池或海灘俱樂部，退房前整理行李</span></li>
         <li><span class="t">下午</span><span class="d">🚗 前往薩努爾（車程約 1 小時，預留塞車時間），入住 InterContinental Bali Sanur Resort</span></li>
         <li><span class="t">傍晚</span><span class="d">薩努爾海灘步道散步，晚餐在飯店或薩努爾一帶吃</span></li>
@@ -186,7 +270,8 @@
     <div class="body">
       <h3>12月11日 週五 — 薩努爾</h3>
       <ul class="tl">
-        <li><span class="t">早上</span><span class="d">薩努爾海灘水上活動：東岸早上風浪小，適合浮潛、獨木舟（看天氣決定）</span></li>
+        <li><span class="t">07:30</span><span class="d">🎾 Liga.Tennis Sanur 07:30–09:00（車程只要 7–10 分，5 面有頂棚球場；打完還能用館內桑拿、泳池）</span></li>
+        <li><span class="t">上午</span><span class="d">薩努爾海灘水上活動：東岸早上風浪小，適合浮潛、獨木舟（看天氣決定）</span></li>
         <li><span class="t">下午</span><span class="d">💆 飯店 SPA、泳池，休息</span></li>
       </ul>
     </div>
@@ -196,6 +281,7 @@
     <div class="body">
       <h3>12月12日 週六 — 薩努爾慢活日</h3>
       <ul class="tl">
+        <li><span class="t">07:30</span><span class="d">🎾 Liga.Tennis Sanur 07:30–09:00：全程最後一場球，打完回飯店慢慢來</span></li>
         <li><span class="t">早上</span><span class="d">海灘散步、泳池，不排遠行</span></li>
         <li><span class="t">下午</span><span class="d">😌 飯店內完全休息，整理行李——全程最放鬆的一天，什麼都不用趕</span></li>
       </ul>
@@ -261,6 +347,13 @@
       <li>AYANA 早餐若三天都吃：IDR 484,000 × 2 人 × 3 天 = IDR 2,904,000 ≈ NT$5,160</li>
       <li>Renaissance 早餐＋晚餐已含，不另計</li>
     </ul>
+    <h4>🎾 網球（預估）</h4>
+    <ul>
+      <li>AYANA 園區球場 × 3 場 — 場地費待飯店確認</li>
+      <li>LIGA Uluwatu × 2 場 ＋ LIGA Sanur × 2 場 — 場地費合計約 IDR 1,500,000 ≈ NT$2,700（未含稅與平台費）</li>
+      <li>陪打另計：Uluwatu IDR 550,000／hr（含場地）；Sanur IDR 280,000／hr（場地另加）</li>
+      <li>球拍租借 IDR 100,000／支（也可自己帶）</li>
+    </ul>
     <h4>🛂 入境費用（2 人 · 待辦）</h4>
     <ul>
       <li>e-VOA 電子落地簽：IDR 500,000／人</li>
@@ -287,6 +380,7 @@
       <li>☐ <b>11/28 前</b>：AYANA 免費取消期限（行程要改的最後機會）</li>
       <li>☐ Sanur 12/11–13 確認號核實（等 IHG 回覆）</li>
       <li>☐ <b>向 AYANA 預約網球場</b>：12/6、12/7、12/8 早上 07:00 時段，並確認 Resort View 房型是否收場地費、Rock Bar 聖誕週與 After Rock 的確切場次日期</li>
+      <li>☐ <b>下載 Liga App 並註冊</b>，依 7 天預約窗訂場：12/2 訂 12/9–12/10 Uluwatu、12/4 訂 12/11 Sanur、12/5 訂 12/12 Sanur（付款後 5 分鐘內要完成結帳）</li>
       <li>☐ 11 月下旬辦理：e-VOA、旅遊稅；入境卡於抵達前 72 小時內填</li>
       <li>☐ <b>12/3 行前最後檢查</b>：天氣、行李、訂房狀態總確認</li>
     </ul>
