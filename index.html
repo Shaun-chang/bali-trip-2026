@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 峇里島渡假之旅 · Bali Escape</title>
+<style>
+  :root{
+    --teal:#0b5d4e; --teal2:#0e7a63; --coral:#ff7a59; --sand:#f7f2e7; --ink:#22302c;
+    --muted:#6b7a74; --card:#ffffff; --line:#e7dfcd; --chip:#eef6f2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;background:var(--sand);color:var(--ink);line-height:1.65}
+  .hero{position:relative;color:#fff;text-align:center;padding:96px 20px 70px;background:linear-gradient(rgba(6,50,40,.45),rgba(6,50,40,.65)),url('https://www.checkpointtravel.se/media/dbcgond0/beautiful-sunset-at-uluwatu-temple-bali-indonesia.jpg?width=1920&height=1440&format=webp&autoorient=true') center/cover no-repeat}
+  .hero .coord{letter-spacing:.35em;font-size:12px;opacity:.85;text-transform:uppercase}
+  .hero h1{font-size:clamp(34px,6vw,58px);margin:14px 0 6px;font-weight:800}
+  .hero .en{font-size:clamp(15px,2.4vw,20px);letter-spacing:.18em;opacity:.92}
+  .hero .dates{margin-top:16px;font-size:16px;opacity:.95}
+  .stats{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:34px}
+  .stats .num{font-size:30px;font-weight:800}
+  .stats .lbl{font-size:12px;opacity:.85;letter-spacing:.2em}
+  .wrap{max-width:920px;margin:0 auto;padding:0 16px 70px}
+  section{margin-top:44px}
+  h2.sec{font-size:24px;color:var(--teal);margin-bottom:6px}
+  p.sub{color:var(--muted);margin-bottom:18px}
+  .route{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+  .step{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 14px;text-align:center}
+  .step .ico{font-size:26px}
+  .step .name{font-weight:700;margin-top:6px}
+  .step .when{font-size:12.5px;color:var(--muted)}
+  .arrow{align-self:center;color:var(--coral);font-weight:800}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:22px;box-shadow:0 2px 10px rgba(30,50,40,.05)}
+  .day img{width:100%;height:210px;object-fit:cover;display:block;background:#cfe3da}
+  .day .body{padding:20px 22px 16px}
+  .day h3{font-size:20px;color:var(--teal);margin-bottom:10px}
+  .day h3 .tag{font-size:12px;vertical-align:middle}
+  .tl{list-style:none}
+  .tl li{display:flex;gap:14px;padding:7px 0;border-bottom:1px dashed #eee4cf}
+  .tl li:last-child{border-bottom:none}
+  .tl .t{flex:0 0 64px;font-weight:700;color:var(--teal2);font-size:14.5px}
+  .tl .d{flex:1;font-size:15px}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;padding:1px 8px;border-radius:20px;background:var(--chip);color:var(--teal);border:1px solid #cfe5da;margin-left:6px;white-space:nowrap}
+  .badge.warn{background:#fdf1e7;color:#a5522a;border-color:#f3d9c2}
+  .costs{display:flex;gap:8px;flex-wrap:wrap;padding:12px 22px 18px}
+  .cost{font-size:13px;background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:3px 12px}
+  .note{font-size:13.5px;color:#8a6d3b;background:#fdf6e3;border:1px solid #f0e2b6;border-radius:10px;padding:9px 13px;margin-top:10px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14.5px}
+  th{background:var(--teal);color:#fff;text-align:left;padding:10px 14px;font-weight:600}
+  td{padding:10px 14px;border-top:1px solid #f0e9d8;vertical-align:top}
+  .money{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+  .money h4{color:var(--teal);margin:12px 0 4px}
+  .money h4:first-child{margin-top:0}
+  .money li{margin-left:20px;font-size:15px}
+  .money .total{margin-top:14px;padding-top:12px;border-top:2px solid var(--line);font-weight:700}
+  .check{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+  .check li{list-style:none;padding:6px 0;border-bottom:1px dashed #eee4cf;font-size:15px}
+  .check li:last-child{border-bottom:none}
+  .pack{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .pack .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .pack h4{color:var(--teal);margin-bottom:8px}
+  .pack li{list-style:none;font-size:14.5px;padding:3px 0}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:26px 10px 40px}
+  @media(max-width:560px){.tl .t{flex-basis:52px}.day img{height:160px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="coord">South 8.4° · Island of the Gods</div>
+  <h1>2026 峇里島渡假之旅</h1>
+  <div class="en">BALI ESCAPE 2026</div>
+  <div class="dates">2026 年 12 月 5 日 – 12 月 13 日 · 金巴蘭 · 烏魯瓦圖 · 薩努爾 · 雨季慢遊</div>
+  <div class="stats">
+    <div><div class="num">9</div><div class="lbl">天</div></div>
+    <div><div class="num">8</div><div class="lbl">夜</div></div>
+    <div><div class="num">3</div><div class="lbl">間飯店</div></div>
+    <div><div class="num">3</div><div class="lbl">個區域</div></div>
+    <div><div class="num">2</div><div class="lbl">人同行</div></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2 class="sec">路線總覽</h2>
+  <p class="sub">從懸崖日落到東岸日出，順時針繞峇里島南邊一圈的九天慢遊</p>
+  <div class="route">
+    <div class="step"><div class="ico">✈️</div><div class="name">抵達 DPS</div><div class="when">12/5 下午約 3 點</div></div>
+    <div class="arrow">➤</div>
+    <div class="step"><div class="ico">🌴</div><div class="name">AYANA RIMBA</div><div class="when">Day 1–3 · 3 晚</div></div>
+    <div class="arrow">➤</div>
+    <div class="step"><div class="ico">🌅</div><div class="name">Renaissance 烏魯瓦圖</div><div class="when">Day 4–5 · 2 晚</div></div>
+    <div class="arrow">➤</div>
+    <div class="step"><div class="ico">🌊</div><div class="name">InterContinental 薩努爾</div><div class="when">Day 6–8 · 3 晚</div></div>
+    <div class="arrow">➤</div>
+    <div class="step"><div class="ico">🏠</div><div class="name">回家</div><div class="when">12/13</div></div>
+  </div>
+  <div class="note">🌧️ 12 月是雨季：雨多半下在午後，早上通常晴天。所以戶外活動都排早上，下午回飯店泳池、SPA、休息。</div>
+</section>
+
+<section>
+  <h2 class="sec">每日行程</h2>
+  <p class="sub">純渡假節奏：每天最多一個重點活動，其餘時間就是飯店、海灘，慢慢來。</p>
+
+  <div class="day">
+    <img src="https://tripbirdie.com/imgs/uploads-small/2022/07/hanging-gardens-of-bali-private-pool-1220.jpg" alt="Bali resort pool">
+    <div class="body">
+      <h3>12月5日 週六 — 抵達日 <span class="badge warn">員工票待訂</span></h3>
+      <ul class="tl">
+        <li><span class="t">15:00</span><span class="d">抵達峇里島 DPS 機場（China Airlines 員工票，預計時間）→ 前往 AYANA</span></li>
+        <li><span class="t">下午</span><span class="d">入住 RIMBA by AYANA Bali · Resort View Room · Check-in 15:00</span></li>
+        <li><span class="t">晚上</span><span class="d">飯店內安頓、休息，晚餐在飯店吃。抵達日不排活動，好好休息就好</span></li>
+      </ul>
+    </div>
+    <div class="costs"><span class="cost">確認號 AB-1HBH7BUS</span><span class="cost">Room-only（不含早餐）</span></div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月6日 週日 — AYANA 度假村日</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">🍳 早餐現場試吃：IDR 484,000 NET／人（飯店餐廳直接付）</span></li>
+        <li><span class="t">白天</span><span class="d">飯店泳池、Kubu 海灘，慢慢玩</span></li>
+        <li><span class="t">下午</span><span class="d">💆 飯店 SPA、水療，放鬆一下</span></li>
+        <li><span class="t">晚上</span><span class="d">飯店內用餐</span></li>
+      </ul>
+      <div class="note">💡 早餐策略：第一天現場付費試吃，好吃再決定後兩天。AYANA 全區 cashless，只收信用卡／線上支付，不用帶現金付早餐。</div>
+    </div>
+  </div>
+
+  <div class="day">
+    <img src="https://www.backroads.com/sites/default/files/styles/trip_gallery_full/public/2023/BL_shutterstock_1044182647_0.jpg.webp?itok=T2_aTqZO" alt="Bali temple">
+    <div class="body">
+      <h3>12月7日 週一 — 烏魯瓦圖神廟</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">烏魯瓦圖神廟參觀（車程約 30 分鐘，早上涼爽、人比較少）</span></li>
+        <li><span class="t">下午</span><span class="d">回飯店休息、泳池</span></li>
+        <li><span class="t">傍晚</span><span class="d">🔥 Kecak 火舞表演（神廟日落時段）<span class="badge">OPTIONAL</span> 下雨就取消，不強求</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月8日 週二 — 換飯店日 <span class="badge">BOOKED</span></h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">AYANA 泳池最後玩一下，12:00 前退房</span></li>
+        <li><span class="t">下午</span><span class="d">🚗 前往 Renaissance Bali Uluwatu（車程約 25 分鐘），15:00 入住、安頓</span></li>
+        <li><span class="t">傍晚</span><span class="d">飯店 R Bar 看日落</span></li>
+        <li><span class="t">晚上</span><span class="d">🍽️ 晚餐飯店內用餐（已含）</span></li>
+      </ul>
+    </div>
+    <div class="costs"><span class="cost">Trip.com 訂單 1616334245425626</span><span class="cost">含早餐＋晚餐</span><span class="cost">TWD 12,175 已付</span></div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月9日 週三 — Renaissance 烏魯瓦圖</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">飯店無邊際泳池，或搭免費接駁車去 Roosterfish 海灘俱樂部（約 15–20 分鐘）</span></li>
+        <li><span class="t">下午</span><span class="d">💆 飯店 SPA、水療，或泳池邊休息</span></li>
+        <li><span class="t">晚上</span><span class="d">🍽️ 晚餐飯店內用餐（已含）——這兩天不用煩惱吃什麼</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day">
+    <img src="https://www.cpt.dk/media/xd5ca011/msr-81-sanur-beach-morning.jpg?width=2600&height=1950&format=webp&autoorient=true" alt="Sanur beach morning">
+    <div class="body">
+      <h3>12月10日 週四 — 換飯店日 <span class="badge">BOOKED</span></h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">飯店泳池或海灘俱樂部，退房前整理行李</span></li>
+        <li><span class="t">下午</span><span class="d">🚗 前往薩努爾（車程約 1 小時，預留塞車時間），入住 InterContinental Bali Sanur Resort</span></li>
+        <li><span class="t">傍晚</span><span class="d">薩努爾海灘步道散步，晚餐在飯店或薩努爾一帶吃</span></li>
+      </ul>
+    </div>
+    <div class="costs"><span class="cost">Junior Suite</span><span class="cost">12/10–11 點數房 · 12/11–13 付費房</span></div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月11日 週五 — 薩努爾</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">薩努爾海灘水上活動：東岸早上風浪小，適合浮潛、獨木舟（看天氣決定）</span></li>
+        <li><span class="t">下午</span><span class="d">💆 飯店 SPA、泳池，休息</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月12日 週六 — 薩努爾慢活日</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">海灘散步、泳池，不排遠行</span></li>
+        <li><span class="t">下午</span><span class="d">😌 飯店內完全休息，整理行李——全程最放鬆的一天，什麼都不用趕</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="body">
+      <h3>12月13日 週日 — 返程日</h3>
+      <ul class="tl">
+        <li><span class="t">早上</span><span class="d">輕量散步或泳池（看航班時間，不排遠行）</span></li>
+        <li><span class="t">下午</span><span class="d">✈️ 退房、前往機場，一路平安</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">預訂總覽</h2>
+  <p class="sub">BOOKED 已完成預訂 · PAID 已付款 · TO CONFIRM 尚待確認</p>
+  <table>
+    <tr><th>住宿</th><th>日期</th><th>價格</th><th>狀態 / 備註</th></tr>
+    <tr>
+      <td><b>RIMBA by AYANA Bali</b><br>Resort View Room · Room-only</td>
+      <td>12/5 – 12/8 · 3 晚</td>
+      <td>NT$16,534（官網含稅）</td>
+      <td><span class="badge">BOOKED</span><br>確認號 AB-1HBH7BUS · LASTDAYINBALI 25% off<br>免費取消至 2026/11/28 00:00 前<br>早餐現場加購 IDR 484,000 NET／人／天</td>
+    </tr>
+    <tr>
+      <td><b>Renaissance Bali Uluwatu Resort &amp; Spa</b></td>
+      <td>12/8 – 12/10 · 2 晚</td>
+      <td>TWD 12,175</td>
+      <td><span class="badge">BOOKED / PAID</span><br>Trip.com 訂單 1616334245425626 · 飯店確認號 97650865<br>含早餐＋晚餐（2 人）· 免費取消至 12/5 23:59（當地時間）</td>
+    </tr>
+    <tr>
+      <td><b>InterContinental Bali Sanur Resort</b><br>Junior Suite Garden View</td>
+      <td>12/10 – 12/11 · 1 晚</td>
+      <td>33,000 IHG 點數</td>
+      <td><span class="badge">BOOKED</span><br>確認號 41557929 · 免費取消至 12/7 18:00</td>
+    </tr>
+    <tr>
+      <td><b>InterContinental Bali Sanur Resort</b><br>Junior Suite · 大使免費週末住宿券費率</td>
+      <td>12/11 – 12/13 · 2 晚</td>
+      <td>USD 509.41（含稅）</td>
+      <td><span class="badge warn">TO CONFIRM</span><br>免費取消至 12/8 18:00（當地時間）· 確認號核實中，以 IHG 回覆為準</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="sec">預算</h2>
+  <p class="sub">已預訂 / 已記錄費用按實際幣別分列，不混合相加。</p>
+  <div class="money">
+    <h4>🏠 住宿（已確定）</h4>
+    <ul>
+      <li>AYANA RIMBA · 3 晚 — NT$16,534（已訂 · 官網含稅）</li>
+      <li>Renaissance Uluwatu · 2 晚 — TWD 12,175（已付 · 含早晚餐）</li>
+      <li>InterContinental Sanur · 1 晚 — 33,000 IHG 點數</li>
+      <li>InterContinental Sanur · 2 晚 — USD 509.41（確認中）</li>
+    </ul>
+    <h4>🍳 餐食（現場付 · 預估）</h4>
+    <ul>
+      <li>AYANA 早餐若三天都吃：IDR 484,000 × 2 人 × 3 天 = IDR 2,904,000 ≈ NT$5,160</li>
+      <li>Renaissance 早餐＋晚餐已含，不另計</li>
+    </ul>
+    <h4>🛂 入境費用（2 人 · 待辦）</h4>
+    <ul>
+      <li>e-VOA 電子落地簽：IDR 500,000／人</li>
+      <li>峇里島旅遊稅：IDR 150,000／人（官方 lovebali.baliprov.go.id）</li>
+      <li>All Indonesia 入境卡：免費，抵達前 72 小時內填寫</li>
+      <li>合計約 IDR 1,300,000 ≈ NT$2,300</li>
+    </ul>
+    <h4>✈️ 交通</h4>
+    <ul>
+      <li>China Airlines 來回機票 — 爸爸的員工票，出發前 45 天開放訂位（2026/10/21 起可訂，尚未訂位）</li>
+      <li>島內接送 — 現場安排</li>
+    </ul>
+    <div class="total">已確定支出：NT$28,709 + 33,000 IHG 點數（＋ Sanur 付費房 USD 509.41 確認中）</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">✅ 出發前待辦</h2>
+  <div class="check">
+    <ul>
+      <li>☑ AYANA 訂單編號更新 — 飯店已回信確認（2026/10/23）</li>
+      <li>☐ <b>訂華航員工票來回機票</b>：10/21 已開放訂位，儘早訂</li>
+      <li>☐ <b>護照效期確認</b>：兩本護照效期需在 2027/6/5 之後，並留 2 頁空白頁</li>
+      <li>☐ <b>11/28 前</b>：AYANA 免費取消期限（行程要改的最後機會）</li>
+      <li>☐ Sanur 12/11–13 確認號核實（等 IHG 回覆）</li>
+      <li>☐ 11 月下旬辦理：e-VOA、旅遊稅；入境卡於抵達前 72 小時內填</li>
+      <li>☐ <b>12/3 行前最後檢查</b>：天氣、行李、訂房狀態總確認</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">行李清單</h2>
+  <div class="pack">
+    <div class="box"><h4>☔ 雨具與防水</h4><ul>
+      <li>☐ 輕便折疊傘 × 2</li><li>☐ 輕量雨衣或防水外套</li><li>☐ 防水手機袋、防水收納袋</li><li>☐ 快乾涼鞋、防水拖鞋</li>
+    </ul></div>
+    <div class="box"><h4>☀️ 防曬與高溫（29–31°C）</h4><ul>
+      <li>☐ 透氣短袖、短褲（多帶 1–2 套）</li><li>☐ 泳衣、泳褲</li><li>☐ 防曬乳、太陽眼鏡、遮陽帽</li><li>☐ 隨身水瓶</li>
+    </ul></div>
+    <div class="box"><h4>🦟 蚊蟲</h4><ul>
+      <li>☐ 防蚊液、叮咬藥膏</li><li>☐ 輕便薄長袖（冷氣＋防蚊）</li>
+    </ul></div>
+    <div class="box"><h4>🛂 證件與常用</h4><ul>
+      <li>☐ 護照＋護照影本</li><li>☐ 印尼轉接頭（歐規雙圓孔）</li><li>☐ 行動電源、充電線</li><li>☐ 常用藥品、個人保養品</li><li>☐ 少量印尼盾現金、信用卡</li>
+    </ul></div>
+  </div>
+</section>
+
+</div>
+<footer>Bali Escape 2026 · 出發前 2–3 天再看一次天氣預報，微調早上行程就好 · 一路平安 🌴</footer>
+</body>
+</html>
